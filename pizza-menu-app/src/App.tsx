@@ -2,14 +2,15 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Menu } from "./components/Menu";
 
+import "./index.css";
 
 export default function App() {
   return (
-    <main style={{ fontFamily: "sans-serif", padding: "2rem" }}>
+    <div className="app container">
       <Header />
       <h1>Welcome to Pizza Paradise!</h1>
       <Menu />
       <Footer />
-    </main>
+    </div>
   );
 }

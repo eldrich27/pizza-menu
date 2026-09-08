@@ -2,10 +2,12 @@ import Pizza from "./Pizza";
 
 export function Menu() {
   return (
-    <div>
-      <h1>Menu</h1>
+    <main className="menu">
+      <h2>Our Menu</h2>
       <p>Check out our delicious pizzas!</p>
       <Pizza />
-    </div>
+      <Pizza />
+      <Pizza />
+    </main>
   );
 }
