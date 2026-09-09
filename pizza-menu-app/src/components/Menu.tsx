@@ -1,5 +1,5 @@
 import Pizza from "./Pizza";
-import pizzaData from "../data";
+import pizzaData from "../data.ts";
 
 export function Menu() {
   return (
