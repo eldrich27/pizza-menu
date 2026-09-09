@@ -1,17 +1,21 @@
 interface PizzaProps {
-    name: string;
-    ingredients: string;
-    price: number;
-    image: string; // Optional image prop
+  name: string;
+  ingredients: string;
+  price: number;
+  image: string;
+  soldOut?: boolean;
 }
 
-export default function Pizza({image, name, ingredients, price }: PizzaProps) {
+export default function Pizza({ image, name, ingredients, price, soldOut = false }: PizzaProps) {
   return (
-    <div>
-        <img src={image} alt={name} />
-        <h3>Pizza : {name}</h3>
+    <li className={`pizza ${soldOut ? "sold-out" : ""}`}>
+      <img src={image} alt={name} />
+
+      <div>
+        <h3>{name}</h3>
         <p>{ingredients}</p>
-        <p>Price: ${price.toFixed(2)}</p>
-    </div>
+        <span>{soldOut ? "Sold out" : `$${price.toFixed(2)}`}</span>
+      </div>
+    </li>
   );
 }
