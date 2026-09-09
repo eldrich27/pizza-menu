@@ -6,7 +6,7 @@ import "./index.css";
 
 export default function App() {
   return (
-    <div className="app container">
+    <div className="container">
       <Header />
       <h1>Welcome to Pizza Paradise!</h1>
       <Menu />
