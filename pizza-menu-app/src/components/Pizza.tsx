@@ -1,15 +1,21 @@
-interface PizzaProps {
+type PizzaItem = {
   name: string;
   ingredients: string;
   price: number;
-  image: string;
-  soldOut?: boolean;
+  photoName: string;
+  soldOut: boolean;
+};
+
+interface PizzaProps {
+  pizza: PizzaItem;
 }
 
-export default function Pizza({ image, name, ingredients, price, soldOut = false }: PizzaProps) {
+export default function Pizza({ pizza }: PizzaProps) {
+  const { name, ingredients, price, photoName, soldOut } = pizza;
+
   return (
     <li className={`pizza ${soldOut ? "sold-out" : ""}`}>
-      <img src={image} alt={name} />
+      <img src={`/${photoName}`} alt={name} />
 
       <div>
         <h3>{name}</h3>

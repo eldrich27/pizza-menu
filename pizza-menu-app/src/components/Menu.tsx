@@ -1,5 +1,5 @@
 import Pizza from "./Pizza";
-import pizzaData from "../data.ts";
+import pizzaData from "../data";
 
 export function Menu() {
   return (
@@ -9,14 +9,7 @@ export function Menu() {
 
       <ul className="pizzas">
         {pizzaData.map((pizza) => (
-          <Pizza
-            key={pizza.name}
-            image={`/${pizza.photoName}`}
-            name={pizza.name}
-            ingredients={pizza.ingredients}
-            price={pizza.price}
-            soldOut={pizza.soldOut}
-          />
+          <Pizza key={pizza.name} pizza={pizza} />
         ))}
       </ul>
     </main>
