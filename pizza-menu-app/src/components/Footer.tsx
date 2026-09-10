@@ -1,6 +1,6 @@
 export function Footer() {
     const currentHour: number = new Date().getHours();
-    const isOpen: boolean = currentHour >= 10 && currentHour < 23; // Open from 10 AM to 11 PM
+    const isOpen: boolean = currentHour >= 6 && currentHour < 23; // Open from 10 AM to 11 PM
 
     return (
         <footer className="footer">
