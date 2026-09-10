@@ -3,7 +3,7 @@ type PizzaItem = {
   ingredients: string;
   price: number;
   photoName: string;
-  soldOut: boolean;
+  soldOut?: boolean;
 };
 
 interface PizzaProps {
